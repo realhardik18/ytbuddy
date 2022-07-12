@@ -21,6 +21,8 @@ def infoOfAllVids(url_to_channle):
     all_vids = list()
     videos = scrapetube.get_channel(
         url_to_channle[len(url_to_channle)-url_to_channle[::-1].index('/'):])
+    return list(videos)[0]
+    '''        
     for video in videos:
         all_vids.append(f"https://youtube.com/watch?v={video['videoId']}")
         # print(f"https://youtube.com/watch?v={video['videoId']}")
@@ -28,5 +30,6 @@ def infoOfAllVids(url_to_channle):
     for video in all_vids:
         all_data.append(infoOfVideo(video))
     return all_data
+    '''
 # print(info(all_vids[0]))
 # work on site aspect now

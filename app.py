@@ -16,4 +16,4 @@ def post():
     return render_template('result.html', data=infoOfAllVids(user_input))
 
 
-app.run()
+app.run(debug=True)
