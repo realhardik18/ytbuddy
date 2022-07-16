@@ -1,6 +1,7 @@
 from pytube import YouTube
 import scrapetube
 from operator import itemgetter
+# this is to get info about the give video url
 
 
 def infoOfVideo(video_link):
@@ -19,6 +20,7 @@ def infoOfVideo(video_link):
     return information
 
 
+# this gives all the videos of a youtube channle
 def infoOfAllVids(url_to_channle):
     all_vids = list()
     videos = scrapetube.get_channel(
@@ -31,11 +33,15 @@ def infoOfAllVids(url_to_channle):
         all_data.append(infoOfVideo(video))
     return all_data
 
+# this returns the top 15 most vewied videos of a youtube channle
+
 
 def Top15MostVeiwed(url_to_channle):
     data = infoOfAllVids(url_to_channle)
     newlist = sorted(data, key=itemgetter('views'))[::-1]
     return newlist[:15]
+
+# this returns the 15 least vewied videos
 
 
 def Top15LeastVeiwed(url_to_channle):
