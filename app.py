@@ -18,3 +18,7 @@ def post():
 
 
 app.run(debug=True)
+# wrok on ui
+# work on dynamic routing for stats
+# add more features
+# landing page for reports feautes and link buddy grpo insta
