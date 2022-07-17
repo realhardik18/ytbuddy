@@ -10,16 +10,19 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-{% include"header.html" %} {% for video in data%}
 
-<body>
+{% include"header.html" %}
+
+<body style="background-color: #de211d;">
+    {% for video in data%}
     <div class="card" style="margin-left: 50px;margin-right:50px;margin-top:10px;margin-bottom:10px;">
         <div class="card-body">
             <center>
                 <table class="data-table" style="width: 100%;" border="1px">
                     <tr>
-                        <th>thumbnail here</th>
-                        <td>stats here</td>
+                        <td style="width: 1em;"><img src="https://i.ytimg.com/vi/TQEZt_CNLJQ/hqdefault.jpg" alt=""></td>
+                        <td>
+                        </td>
                     </tr>
                 </table>
             </center>

@@ -16,7 +16,7 @@ def post():
     # return render_template('result.html', data=infoOfAllVids(user_input))
     with open('sampledata.txt') as file:
         test_data = file.read()
-    return render_template('all.html', data=test_data)
+    return render_template('all.html', data=test_data[:15])
 
 
 app.run(debug=True)
