@@ -14,7 +14,7 @@ def home():
 def post():
     user_input = request.form['text']
     # return render_template('result.html', data=infoOfAllVids(user_input))
-    return render_template('result.html', data=ytbuddy.Top15LeastVeiwed(user_input))
+    return render_template('all.html', data=ytbuddy.infoOfAllVids(user_input).value)
 
 
 app.run(debug=True)

@@ -16,3 +16,12 @@
     margin-left: 20px;
 
 }
+
+.form-input{
+    text-align: center;
+}
+
+.form-group{
+    margin-left: 10;
+    margin-right: 10;
+}
