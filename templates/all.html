@@ -18,10 +18,13 @@
     <div class="card" style="margin-left: 50px;margin-right:50px;margin-top:10px;margin-bottom:10px;">
         <div class="card-body">
             <center>
-                <table class="data-table" style="width: 100%;" border="1px">
+                <table class="data-table" style="width: 100%;" border="0px">
                     <tr>
-                        <td style="width: 1em;"><img src="https://i.ytimg.com/vi/TQEZt_CNLJQ/hqdefault.jpg" alt=""></td>
+                        <td style="width: 1em;"><img src="{{video['thumbnail_url']}}" alt=""></td>
                         <td>
+                            <h1>{{video['title']}}</h1>
+                            <h2>at {{video['author']}}</h2>
+                            <h3>views {{video['views']}}</h3>
                         </td>
                     </tr>
                 </table>
