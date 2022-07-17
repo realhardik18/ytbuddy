@@ -13,13 +13,16 @@
 {% include"header.html" %} {% for video in data%}
 
 <body>
-    <div class="card mb-3" style="margin-left: 50px;margin-right:50px;">
-        <img class="card-img-top" src="/static/test.png" alt="Card image cap" width="50%" height="50%">
+    <div class="card" style="margin-left: 50px;margin-right:50px;margin-top:10px;margin-bottom:10px;">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <center>
+                <table class="data-table" style="width: 100%;" border="1px">
+                    <tr>
+                        <th>thumbnail here</th>
+                        <td>stats here</td>
+                    </tr>
+                </table>
+            </center>
         </div>
     </div>
 </body>
