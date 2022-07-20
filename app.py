@@ -21,7 +21,7 @@ def post():
     '''
 
 
-app.run(debug=True)
+app.run()
 # wrok on ui
 # work on dynamic routing for stats
 # add more features

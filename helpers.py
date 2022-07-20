@@ -16,6 +16,7 @@ def infoOfVideo(video_link):
     information['thumbnail_url'] = yt.thumbnail_url
     information['title'] = yt.title
     information['views'] = yt.views
+    information['vid_link'] = video_link
 
     return information
 
