@@ -10,17 +10,6 @@ def home():
     return render_template("index.html")
 
 
-@app.route('/result', methods=['POST'])
-def post():
-    user_input = request.form['text']
-    return render_template('all.html', data=ytbuddy.infoOfAllVids(user_input).value)
-    '''
-    with open('sampledata.txt') as file:
-        test_data = file.read()
-    return render_template('all.html', data=test_data[:15])
-    '''
-
-
 app.run()
 # wrok on ui
 # work on dynamic routing for stats
