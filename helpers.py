@@ -1,16 +1,20 @@
-from PIL import Image
-from io import BytesIO
-import requests
+from pytube import YouTube
 
 
 def test():
     return 'hello world'
 
 
-def max_colors(thumbnail_URL):
-    response = requests.get(thumbnail_URL)
-    img = Image.open(BytesIO(response.content))
-    return img.getcolors()
-
-
-print(max_colors('https://i.ytimg.com/vi/troEfX2xU7g/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAriuyAF6KnU30xGkqYCCWybgAMzA'))
+def stats(video_link):
+    yt = YouTube(video_link)
+    information = dict()
+    information['18+'] = yt.age_restricted
+    information['author'] = yt.author
+    information['url_to_author'] = yt.channel_url
+    information['description'] = yt.description
+    information['lenght_in_seconds'] = yt.length
+    information['publish_data'] = yt.publish_date
+    information['thumbnail_url'] = yt.thumbnail_url
+    information['title'] = yt.title
+    information['views'] = yt.views
+    return information
