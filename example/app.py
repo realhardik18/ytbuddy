@@ -10,8 +10,18 @@ def home():
     return render_template("index.html")
 
 
-app.run()
-# wrok on ui
-# work on dynamic routing for stats
-# add more features
-# landing page for reports feautes and link buddy grpo insta
+@app.route('/channle')
+def channle():
+    return render_template("index.html")
+
+
+@app.route('/video', methods=['GET', "POST"])
+def video():
+    if request.method == "GET":
+        return render_template("video.html")
+    elif request.method == 'POST':
+        video = request.form['videourl']
+        return ytbuddy.stats(video).value
+
+
+app.run(debug=True)
