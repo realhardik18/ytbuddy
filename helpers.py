@@ -1,4 +1,4 @@
-from pytube import YouTube
+from pytube import YouTube, Channel
 import youtube_dl
 
 
@@ -22,7 +22,6 @@ def stats(video_link):
 
 
 def download_as_mp3(link_to_video):
-
     ydl_opts = {
         'format': 'bestaudio/best',
         'postprocessors': [{
@@ -35,3 +34,11 @@ def download_as_mp3(link_to_video):
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download([link_to_video])
     return 'finished!'
+
+
+def return_all_videos(link_to_channle):
+    channle = Channel(link_to_channle)
+    return channle.video_urls
+
+
+print(return_all_videos('https://www.youtube.com/channel/UCJBtCUf_GEvlYeOwUSnCC0Q'))
